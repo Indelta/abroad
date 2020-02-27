@@ -1,0 +1,17 @@
+#partners {
+   background: #383838;
+   padding: 40px 0;
+   h2 {
+       margin-bottom: 50px;
+   }
+   #partnersLogos {
+       text-align: center;
+   }
+   @media screen and (max-width: 920px) {
+       #partnersLogos {
+           img {
+               width: 100%;
+           }
+       }
+   }
+}

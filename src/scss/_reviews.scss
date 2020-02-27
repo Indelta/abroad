@@ -1,0 +1,96 @@
+@import '../../node_modules/@glidejs/glide/src/assets/sass/glide.core.scss';
+@import '../../node_modules/@glidejs/glide/src/assets/sass/glide.theme.scss';
+#reviews {
+    padding: 50px 0;
+    text-align: center;
+    .title {
+        margin-bottom: 50px;
+    }
+    #reviewsCarousel {
+        .item {
+            max-width: 660px;
+            margin: 0 auto;
+            display: flex;
+            align-items: flex-start;
+            text-align: left;
+            .left {
+                width: 40%;
+            }
+            .right {
+                width: 60%;
+                padding-left: 30px;
+            }
+            .profile {
+                margin-bottom: 20px;
+                h3 {
+                    font-weight: 700;
+                    font-size: 22px;
+                    color: #1d1d1d;
+                }
+                span {
+                    font-size: 12px;
+                    color: #a4a2a2;
+                }
+            }
+            .text {
+                font-size: 14px;
+                color: #5f5f5f;
+                line-height: 1.5;
+            }
+            img {
+                width: 100%;
+            }
+        }
+        #slideBack, #slideNext {
+            box-shadow: none;
+            color: #000;
+            font-size: 30px;
+        }
+        #slideBack {
+            left: 0;
+        }
+        #slideNext {
+            right: 0;
+        }
+    }
+
+    @media screen and (max-width: 920px) {
+       #reviewsCarousel {
+           .item {
+               flex-wrap: wrap;
+                .left, .right {
+                    width: 100%;
+                    text-align: center;
+                    padding: 0;
+                    img {
+                        max-width: 300px;
+                    }
+                }
+                .left {
+                    margin-bottom: 20px;
+                }
+           }
+       } 
+    }
+    @media screen and (max-width: 480px) {
+        padding: 30px 0;
+        .title {
+            margin-bottom: 30px;
+        }
+        #reviewsCarousel {
+            .item {
+                width: 80%;
+            }
+            #slideBack {
+                left: auto;
+                right: 90%;
+                padding: 10px;
+            }
+            #slideNext {
+                right: auto;
+                left: 90%;
+                padding: 10px;
+            }
+        }
+    }
+}

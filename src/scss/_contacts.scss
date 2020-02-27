@@ -1,0 +1,94 @@
+#contacts {
+    background: url('../img/contacts_bg.jpg') 0 0 no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 20px 0;
+    .inner {
+        display: flex;
+        align-items: center;
+    }
+    .left {
+        width: 40%;
+    }
+    .right {
+        width: 60%;
+    }
+    .contacts-block {
+        margin-bottom: 20px;
+        p {
+            color: #fff;
+            &.colored {
+                font-size: 16px;
+                font-weight: 700; 
+                color: $darkGreen;
+                margin-bottom: 10px;  
+            }
+        }
+    }
+    #contacts-form {
+        background: #fff;
+        padding: 15px 30px;
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            p {
+                font-size: 12px;
+                color: #737d83;
+                margin-bottom: 5px;
+            }
+            input, textarea {
+                display: block;
+                width: 100%;
+                box-sizing: border-box;
+            }
+            input {
+               height: 35px;
+               border: 1px solid #dadada;
+               padding: 5px 10px;
+            }
+            textarea {
+                min-height: 110px;
+            }
+        }
+        footer {
+            display: flex;
+            justify-content: flex-end;
+            position: relative;
+            &::before {
+                content: url('../img/contacts_dot.jpg');
+                position: absolute;
+                display: block;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                margin: auto;
+                height: 15px;
+            }
+            .btn {
+                display: block;
+                max-width: 180px;
+                text-align: center;
+                color: #fff;
+                text-transform: uppercase;
+                font-weight: 500;
+                background: $darkGreen;
+                padding: 10px 20px;
+                transition: all .3s;
+                cursor: pointer;
+                border: 0;
+                &:hover {
+                    background: darken($darkGreen, 20%);
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 920px) {
+        .inner {
+            flex-wrap: wrap;
+            .left, .right {
+                width: 100%;
+            }
+        }
+    }
+}

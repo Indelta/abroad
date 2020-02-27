@@ -1,0 +1,105 @@
+@import './reset';
+@import './fonts';
+@import './variables';
+
+body, html {
+    font-family: 'Glober', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 970px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 40px;
+    color: $strongColor;
+    font-weight: 900;
+    display: inline-block;
+    padding-right: 20px;
+    margin-bottom: 30px;
+    &.with-dot {
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 100%;
+            height: 85%;
+            width: 100%;
+            max-width: 60px;
+            display: block;
+            background: url('../img/dot.png') 0 center no-repeat;
+        }
+        &.dot-left {
+            padding-right: 0;
+            padding-left: 20px;
+            &::before {
+                left: auto;
+                right: 100%;
+                background-position: right center;
+            }
+        }
+    }
+    &.white {
+        color: #fff;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    width: 10px;
+    background: #fff;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, .3);
+}
+::-webkit-scrollbar-thumb {
+    width: 10px;
+    background: $green;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-button {
+    background: $linkBlueBg;
+    cursor: pointer;
+}
+
+@import '_header';
+@import '_parallax';
+@import '_aboutUs';
+@import '_services';
+@import '_portfolio';
+@import '_partners';
+@import '_reviews';
+@import '_contacts';
+@import '_footer';
+@import '_mobile';
+@import '_modal';
+
+.mobile {
+    display: none;
+}
+.desctop {
+    display: block;
+}
+
+@media screen and (max-width: 920px) {
+    .container {
+        padding: 0 20px;
+    }
+    .desctop {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .title {
+        font-size: 30px;
+    }
+}
