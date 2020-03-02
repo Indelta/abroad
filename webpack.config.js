@@ -85,6 +85,10 @@ module.exports = (env, argv) => ({
             {
                 from: './src/img/',
                 to: 'img'
+            },
+            {
+                from: './src/send/',
+                to: './'
             }
         ])
     ]
