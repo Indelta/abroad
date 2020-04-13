@@ -78,7 +78,7 @@ module.exports = (env, argv) => ({
         new HtmlWebpackPlugin({
             template: path.join(__dirname, 'src', 'index.html'),
             filename: 'index.html',
-            title: 'ABroad',
+            title: 'ABroad - mice services provider',
             favicon: 'src/favicon.ico'
         }),
         new CopyWebpackPlugin([

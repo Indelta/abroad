@@ -5,6 +5,7 @@
     $email = isset($_POST['email']) ? $_POST['email'] : "";
     $type = isset($_POST['type']) ? $_POST['type'] : '';
     $message = isset($_POST['message']) ? $_POST['message'] : '';
+    $server_name = 'mice.by';
 
     $mail_body = "
         <p>Имя: $name</p>

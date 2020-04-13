@@ -183,8 +183,12 @@ let form = document.getElementById('contacts-form');
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     let data = new FormData(form);
-    sendForm(data, '/send.php')
-        .then(response => console.log(response))
+    sendForm(data, './send.php')
+        .then(response => {
+            form.reset();
+            // open thankyou modal
+            openModal(document.querySelector('.thankyou-modal'));
+        })
         .catch(er => console.log(er));
 });
 
@@ -195,7 +199,7 @@ let servicesForm = document.getElementById('services-form');
 servicesForm.addEventListener('submit', (e) => {
     e.preventDefault();
     let data = new FormData(servicesForm);
-    sendForm(data, '/send.php')
+    sendForm(data, './send.php')
         .then(response => openModal(document.querySelector('.thankyou-modal')))
         .catch(er => console.log(er));
 });
