@@ -56,7 +56,7 @@
             justify-content: flex-end;
             position: relative;
             &::before {
-                content: url('../img/contacts_dot.jpg');
+                content: url('../img/dot.svg');
                 position: absolute;
                 display: block;
                 top: 0;
@@ -64,6 +64,7 @@
                 left: 0;
                 margin: auto;
                 height: 15px;
+                width: 60px;
             }
             .btn {
                 display: block;

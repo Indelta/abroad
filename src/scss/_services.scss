@@ -47,8 +47,18 @@
                 .icon {
                     display: none;
                 }
-                .icon-hovered {
+
+                .icon-mobile {
                     display: inline-block;
+                    margin-bottom: 68px;
+
+                    @media (max-width: 920px) {
+                        margin-bottom: 0px;
+                    }
+                }
+
+                .icon-hovered {
+                    display: none;
                 }
                 &:nth-child(1) {
                     background: $linkBlueBg;

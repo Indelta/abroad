@@ -6,6 +6,12 @@ header {
     }
     .logo {
         margin-right: 35px;
+        width: 107px;
+        height: 110px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
     }
     .menu {
         display: flex;
@@ -84,9 +90,14 @@ header {
                 }
                 span {
                     font-size: 12px;
-                    &.icon {
+                    &.icon {                        
                         display: inline-block;
                         margin-right: 15px;
+
+                        img {
+                            width: 23px;
+                            height: 23px;
+                        }
                     }
                 }
             }
